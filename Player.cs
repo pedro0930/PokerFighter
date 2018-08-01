@@ -31,6 +31,8 @@ namespace cards{
         for (int i = 0; i < PlayerHand.Count; i++){
         System.Console.WriteLine("Index: "+ i + " - "  + PlayerHand[i].stringVal);
         System.Console.WriteLine("The following cards are selected and will be played if you 'confirm'");
+
+        
         }
     }
     public void Select(int index){
