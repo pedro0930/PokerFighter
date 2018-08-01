@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\cards.csproj",
+      "projectUniqueName": "c:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\cards.csproj",
       "projectName": "cards",
-      "projectPath": "C:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\cards.csproj",
+      "projectPath": "c:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\cards.csproj",
       "packagesPath": "C:\\Users\\pedro0930\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\obj\\",
+      "outputPath": "c:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
