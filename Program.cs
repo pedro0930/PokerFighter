@@ -8,7 +8,7 @@ namespace cards
         static void Main(string[] args)
         {
             // Set up
-            // int round = 1;
+            int discard = 0;
             System.Console.WriteLine("Please Input Player 1 name");
             string Player1Name = Console.ReadLine();
             System.Console.WriteLine("Player 1 is: " + Player1Name);
@@ -51,13 +51,20 @@ namespace cards
                     Player1.Draw(myDeck.DeckOfCards);
                     }
                 if (PlayerCommand == "discard"){
+                    Player1.LookAtHand(Player1.PlayerHand);
+                    System.Console.WriteLine("Select the card you want to discard by index");
                     string discardSelection = Console.ReadLine();
-                    PlayerCommand = Console.ReadLine();
+                    discard++;
                     }
                 if (PlayerCommand == "look"){
                     Player1.LookAtHand(Player1.PlayerHand);
                     }
                 if (PlayerCommand == "confirm"){
+                    if(discard > 0){
+                        for(int i = 0; i< discard;i++){
+                            Player1.Draw(myDeck.DeckOfCards);
+                        }
+                    }
                     Monster1.PlayerAttack(Player1.AllCard());
                     Monster1.Attack(Player1);
                     for (int i = 0; i<5; i++){
