@@ -17,6 +17,7 @@ namespace cards
             for (int i = 0; i<=13; i++){
                 Player1.Draw(myDeck.DeckOfCards);
                 }
+            Player1.LookAtHand(Player1.PlayerHand);
             // Game starts below this line
             string PlayerCommand = "";
             while(PlayerCommand != "quit"){

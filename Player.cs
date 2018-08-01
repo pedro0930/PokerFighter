@@ -14,7 +14,6 @@ namespace cards{
         Card temp = DeckOfCards[0];
         DeckOfCards.RemoveAt(0);
         PlayerHand.Add(temp);
-        System.Console.WriteLine("Player hand is currently: "+ PlayerHand.Count);
         return temp;
         }
     public Card Discard(int index){
@@ -31,6 +30,9 @@ namespace cards{
         System.Console.WriteLine("The following cards are in your hand");
         for (int i = 0; i < PlayerHand.Count; i++){
         System.Console.WriteLine("Index: "+ i + " - "  + PlayerHand[i].stringVal);
+        System.Console.WriteLine("The following cards are selected and will be played if you 'confirm'");
+
+        
         }
     }
     public void Select(int index){
