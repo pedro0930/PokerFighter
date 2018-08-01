@@ -61,8 +61,11 @@ namespace cards
                     Player1.Select(PlayerSelect);
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 System.Console.WriteLine("Processed");
 =======
+=======
+>>>>>>> 469e9f3fd9080aa05d3aa728cb2a6fe816caef39
                 if (PlayerCommand == "AllCard"){
                     Player1.LookAtHand(Player1.PlayerHand);
                     Player1.AllCard(Player1.PlayerSelection);
@@ -74,8 +77,11 @@ namespace cards
                 
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> 469e9f3fd9080aa05d3aa728cb2a6fe816caef39
     }
         
 }
