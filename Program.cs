@@ -14,6 +14,7 @@ namespace cards
             System.Console.WriteLine("Player 1 is: " + Player1Name);
             Deck myDeck = new Deck();
             Player Player1 = new Player(Player1Name);
+            Monster Monster1 = new Monster();
             myDeck.Shuffle(myDeck.DeckOfCards);
             for (int i = 0; i<=13; i++){
                 Player1.Draw(myDeck.DeckOfCards);
@@ -23,6 +24,24 @@ namespace cards
             string PlayerCommand = "";
             string PlayerSelect = "";
             while(PlayerCommand != "quit"){
+                if (Player1.health < 50){
+                    System.Console.WriteLine("You are badly hurt!");
+                }
+                else if (Player1.health < 25){
+                    System.Console.WriteLine("You are critically injured!");
+                }
+                if (Monster1.health > 90){
+                    System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's unhurt.");
+                    }
+                else if(Monster1.health > 90){
+                    System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's injured.");
+                    }
+                else if(Monster1.health > 90){
+                    System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's badly hurt.");
+                    }
+                else if(Monster1.health > 90){
+                    System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's on its last leg.");
+                    }
                 System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'discard' if you have card in hand.");
                 PlayerCommand = Console.ReadLine();
                 if (PlayerCommand == "draw"){
@@ -41,11 +60,9 @@ namespace cards
                     PlayerSelect = Console.ReadLine();
                     Player1.Select(PlayerSelect);
                     }
-                System.Console.WriteLine("Shit happened");
+                System.Console.WriteLine("Processed");
                 System.Console.WriteLine("##################################");
                 }
             }
         }
-        
-    }
-
+}

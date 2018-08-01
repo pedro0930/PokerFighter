@@ -7,7 +7,10 @@ namespace cards{
 
         public Monster(){
         this.health = 100;
-        this.name = "Werewolf"
+        this.name = "The Tester Monster";
+        }
+        public void attack(Player target){
+            target.health -=10;
         }
     }
 }
