@@ -8,7 +8,7 @@ namespace cards
         static void Main(string[] args)
         {
             // Set up
-            int round = 1;
+            // int round = 1;
             System.Console.WriteLine("Please Input Player 1 name");
             string Player1Name = Console.ReadLine();
             System.Console.WriteLine("Player 1 is: " + Player1Name);
