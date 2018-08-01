@@ -1,3 +1,6 @@
+using System;
+using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace cards{
@@ -6,9 +9,11 @@ namespace cards{
         public List<Card> PlayerHand = new List<Card>();
         public List<Card> PlayerSelection = new List<Card>();
         public string name;
+        public int health;
     
     public Player(string name){
         this.name = name;
+        this.health = 100;
         }
     public Card Draw(List<Card> DeckOfCards){
         Card temp = DeckOfCards[0];
@@ -29,13 +34,16 @@ namespace cards{
     public void LookAtHand(List<Card> PlayerHand){
         System.Console.WriteLine("The following cards are in your hand");
         for (int i = 0; i < PlayerHand.Count; i++){
-        System.Console.WriteLine("Index: "+ i + " - "  + PlayerHand[i].stringVal);
-        System.Console.WriteLine("The following cards are selected and will be played if you 'confirm'");
-
-        
+            System.Console.WriteLine("Index: "+ i + " - "  + PlayerHand[i].stringVal);
         }
+            System.Console.WriteLine("The following cards are selected and will be played if you 'confirm'");
+        for (int i = 0; i < PlayerSelection.Count; i ++){
+            System.Console.WriteLine("Index: "+ i + " - "  + PlayerSelection[i].stringVal);
+        }
+        
     }
-    public void Select(int index){
+    public void Select(string indexStr){
+        int index = Int32.Parse(indexStr);
         Card temp = PlayerHand[index];
         PlayerHand.RemoveAt(index);
         PlayerSelection.Add(temp);
