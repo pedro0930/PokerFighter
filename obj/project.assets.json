@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/Curry30/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\pedro0930\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Curry30/Desktop/coding_dojo/C#.Net/day3/PokerFighter/cards.csproj",
+      "projectUniqueName": "c:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\cards.csproj",
       "projectName": "cards",
-      "projectPath": "/Users/Curry30/Desktop/coding_dojo/C#.Net/day3/PokerFighter/cards.csproj",
-      "packagesPath": "/Users/Curry30/.nuget/packages/",
-      "outputPath": "/Users/Curry30/Desktop/coding_dojo/C#.Net/day3/PokerFighter/obj/",
+      "projectPath": "c:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\cards.csproj",
+      "packagesPath": "C:\\Users\\pedro0930\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\pedro0930\\Desktop\\C#_stack\\cards\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Curry30/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\pedro0930\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
