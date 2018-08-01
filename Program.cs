@@ -45,7 +45,7 @@ namespace cards
                     }
                 
                 
-                System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'discard' if you have card in hand, 'confirm' to play your hand. You can also 'quit' if you wish.");
+                System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'discard' if you have card in hand, 'confirm' to play your hand.");
                 PlayerCommand = Console.ReadLine();
                 if (PlayerCommand == "draw"){
                     Player1.Draw(myDeck.DeckOfCards);
@@ -54,6 +54,7 @@ namespace cards
                     Player1.LookAtHand(Player1.PlayerHand);
                     System.Console.WriteLine("Select the card you want to discard by index");
                     string discardSelection = Console.ReadLine();
+                    Player1.Discard(Convert.ToInt32(discardSelection));
                     discard++;
                     }
                 if (PlayerCommand == "look"){
@@ -63,13 +64,16 @@ namespace cards
                     if(discard > 0){
                         for(int i = 0; i< discard;i++){
                             Player1.Draw(myDeck.DeckOfCards);
+                            System.Console.WriteLine(Player1.Draw(myDeck.DeckOfCards).stringVal);
                         }
                     }
                     Monster1.PlayerAttack(Player1.AllCard());
                     Monster1.Attack(Player1);
                     for (int i = 0; i<5; i++){
                         Player1.Draw(myDeck.DeckOfCards);
+
                         }
+                        discard = 0;
                     }
                 System.Console.WriteLine("Processed");
                 System.Console.WriteLine("##################################");
