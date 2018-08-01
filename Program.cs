@@ -18,12 +18,13 @@ namespace cards
             myDeck.Shuffle(myDeck.DeckOfCards);
             for (int i = 0; i<=13; i++){
                 Player1.Draw(myDeck.DeckOfCards);
-            }   
+                }
             Player1.LookAtHand(Player1.PlayerHand);
             // Game starts below this line
             string PlayerCommand = "";
             string PlayerSelect = "";
             while(PlayerCommand != "quit"){
+                // Target description
                 if (Player1.health < 50){
                     System.Console.WriteLine("You are badly hurt!");
                 }
@@ -33,15 +34,17 @@ namespace cards
                 if (Monster1.health > 90){
                     System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's unhurt.");
                     }
-                else if(Monster1.health > 90){
+                else if(Monster1.health < 70){
                     System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's injured.");
                     }
-                else if(Monster1.health > 90){
+                else if(Monster1.health < 30){
                     System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's badly hurt.");
                     }
-                else if(Monster1.health > 90){
+                else if(Monster1.health < 10){
                     System.Console.WriteLine($"A terrifying {Monster1.name} stands before you. It's on its last leg.");
                     }
+                
+                
                 System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'discard' if you have card in hand.");
                 PlayerCommand = Console.ReadLine();
                 if (PlayerCommand == "draw"){
@@ -60,16 +63,12 @@ namespace cards
                     PlayerSelect = Console.ReadLine();
                     Player1.Select(PlayerSelect);
                     }
-
+                if (PlayerCommand == "confirm"){
+                    Monster1.PlayerAttack(Player1.AllCard(Player1.PlayerSelection));
+                    }
                 System.Console.WriteLine("Processed");
-                if (PlayerCommand == "AllCard"){
-                    Player1.LookAtHand(Player1.PlayerHand);
-                    Player1.AllCard(Player1.PlayerSelection);
-                }
-                System.Console.WriteLine("Shit happened");
                 System.Console.WriteLine("##################################");
                 }
-                
+            }
         }
-    }
 }
