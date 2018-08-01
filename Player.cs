@@ -33,14 +33,14 @@ namespace cards{
         }
         public void LookAtHand(List<Card> PlayerHand){
             System.Console.WriteLine("The following cards are in your hand");
-            for (int i = 0; i < PlayerHand.Count; i++){
-                System.Console.WriteLine("Index: "+ i + " - "  + PlayerHand[i].stringVal);
+            if(PlayerHand.Count == 0){
+                System.Console.WriteLine("You have no card!");
+                }
+            else{
+                for (int i = 0; i < PlayerHand.Count; i++){
+                    System.Console.WriteLine("Index: "+ i + " - "  + PlayerHand[i].stringVal);
+                }            
             }
-                System.Console.WriteLine("The following cards are selected and will be played if you 'confirm'");
-            for (int i = 0; i < PlayerSelection.Count; i ++){
-                System.Console.WriteLine("Index: "+ i + " - "  + PlayerSelection[i].stringVal);
-            }
-            
         }
         public void Select(string indexStr){
             int index = Int32.Parse(indexStr);
@@ -49,23 +49,21 @@ namespace cards{
             PlayerSelection.Add(temp);
             }
 
-        public int AllCard(List<Card> AllCards){
-            AllCards = PlayerSelection;
-            int Max = AllCards[0].val;
-            for (int i = 0; i < AllCards.Count; i++)
+        public int AllCard(){
+            
+            int Max = this.PlayerHand[0].val;
+            for (int i = 0; i < this.PlayerHand.Count; i++)
             {
-                if( AllCards[i].val > Max){
-                    Max = AllCards[i].val;
+                if( this.PlayerHand[i].val > Max){
+                    Max = this.PlayerHand[i].val;
                 }
                 
-                for (int j = i+1; i < AllCards.Count; i++)
+                for (int j = i+1; j < this.PlayerHand.Count; j++)
                 {
-                    if(AllCards[i].val == AllCards[j].val){
+                    if(this.PlayerHand[i].val == this.PlayerHand[j].val){
                         System.Console.WriteLine("Found Pair");
-                        Card pair1 = AllCards[i];
-                        Card pair2 = AllCards[j];
-                        AllCards.RemoveAt(i);
-                        AllCards.RemoveAt(j);
+                        Card pair1 = this.PlayerHand[i];
+                        this.PlayerHand.Clear();
                         return (pair1.val * 2);
                     }
                 }
