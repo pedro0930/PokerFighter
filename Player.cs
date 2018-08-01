@@ -30,7 +30,7 @@ namespace cards{
         System.Console.WriteLine("The following cards are in your hand");
         for (int i = 0; i < PlayerHand.Count; i++){
         System.Console.WriteLine("Index: "+ i + " - "  + PlayerHand[i].stringVal);
-        System.Console.WriteLine("The following cards are selected and will be played if you 'confirm'");
+        // System.Console.WriteLine("The following cards are selected and will be played if you 'confirm'");
 
         
         }
@@ -40,5 +40,21 @@ namespace cards{
         PlayerHand.RemoveAt(index);
         PlayerSelection.Add(temp);
         }
+    public void AllCard(List<Card> AllCards){
+        AllCards = PlayerSelection;
+
+        for (int i = 0; i < AllCards.Count; i++)
+        {
+            for (int j = i; i < AllCards.Count; i++)
+            {
+                if(AllCards[i].val == AllCards[j].val){
+                    System.Console.WriteLine("Found Double");
+                }
+            }
+            
+        }
+        }
     }
+
+
 }
