@@ -64,7 +64,7 @@ namespace cards
                     Player1.Select(PlayerSelect);
                     }
                 if (PlayerCommand == "confirm"){
-                    Player1.AllCard(Player1.PlayerSelection)
+                    Monster1.PlayerAttack(Player1.AllCard(Player1.PlayerSelection));
                     }
                 System.Console.WriteLine("Processed");
                 System.Console.WriteLine("##################################");

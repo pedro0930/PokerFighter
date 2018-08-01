@@ -10,7 +10,11 @@ namespace cards{
         this.name = "The Tester Monster";
         }
         public void Attack(Player target){
-            target.health -=10;
+                target.health -=10;
+        }
+        public void PlayerAttack(int damage){
+                this.health -= damage;
+                System.Console.WriteLine($"The {this.name} is attacked for {damage}!");
         }
     }
 }
