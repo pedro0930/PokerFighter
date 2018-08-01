@@ -8,6 +8,7 @@ namespace cards
         static void Main(string[] args)
         {
             // Set up
+            int round = 1;
             System.Console.WriteLine("Please Input Player 1 name");
             string Player1Name = Console.ReadLine();
             System.Console.WriteLine("Player 1 is: " + Player1Name);
@@ -20,6 +21,7 @@ namespace cards
             Player1.LookAtHand(Player1.PlayerHand);
             // Game starts below this line
             string PlayerCommand = "";
+            string PlayerSelect = "";
             while(PlayerCommand != "quit"){
                 System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'discard' if you have card in hand.");
                 PlayerCommand = Console.ReadLine();
@@ -28,19 +30,28 @@ namespace cards
                     }
                 if (PlayerCommand == "discard"){
                     string discardSelection = Console.ReadLine();
-                    System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'discard' if you have card in hand.");
+                    System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'select' cards you want to play. You can also 'look' at your hand. ");
                     PlayerCommand = Console.ReadLine();
                     }
                 if (PlayerCommand == "look"){
                     Player1.LookAtHand(Player1.PlayerHand);
-                }
+                    }
+                if (PlayerCommand == "select"){
+                    System.Console.WriteLine("Input the index of the card you want to select");
+                    PlayerSelect = Console.ReadLine();
+                    Player1.Select(PlayerSelect);
+                    }
                 System.Console.WriteLine("Shit happened");
+<<<<<<< HEAD
                 System.Console.WriteLine("Please input exact command for your action, you can 'draw' or 'discard' if you have card in hand.");
                 PlayerCommand = Console.ReadLine();
                 if (PlayerCommand == "AllCard"){
                     Player1.LookAtHand(Player1.PlayerHand);
                 }
                 System.Console.WriteLine("Shit happened");
+=======
+                System.Console.WriteLine("##################################");
+>>>>>>> master
                 }
                 
             }
