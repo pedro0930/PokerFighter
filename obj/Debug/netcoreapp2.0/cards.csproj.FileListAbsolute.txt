@@ -1,0 +1,11 @@
+C:\Users\pedro0930\Desktop\C#_stack\cards\bin\Debug\netcoreapp2.0\cards.deps.json
+C:\Users\pedro0930\Desktop\C#_stack\cards\bin\Debug\netcoreapp2.0\cards.runtimeconfig.json
+C:\Users\pedro0930\Desktop\C#_stack\cards\bin\Debug\netcoreapp2.0\cards.runtimeconfig.dev.json
+C:\Users\pedro0930\Desktop\C#_stack\cards\bin\Debug\netcoreapp2.0\cards.dll
+C:\Users\pedro0930\Desktop\C#_stack\cards\bin\Debug\netcoreapp2.0\cards.pdb
+C:\Users\pedro0930\Desktop\C#_stack\cards\obj\Debug\netcoreapp2.0\cards.csprojResolveAssemblyReference.cache
+C:\Users\pedro0930\Desktop\C#_stack\cards\obj\Debug\netcoreapp2.0\cards.csproj.CoreCompileInputs.cache
+C:\Users\pedro0930\Desktop\C#_stack\cards\obj\Debug\netcoreapp2.0\cards.AssemblyInfoInputs.cache
+C:\Users\pedro0930\Desktop\C#_stack\cards\obj\Debug\netcoreapp2.0\cards.AssemblyInfo.cs
+C:\Users\pedro0930\Desktop\C#_stack\cards\obj\Debug\netcoreapp2.0\cards.dll
+C:\Users\pedro0930\Desktop\C#_stack\cards\obj\Debug\netcoreapp2.0\cards.pdb
