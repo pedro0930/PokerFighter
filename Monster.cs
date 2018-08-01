@@ -7,7 +7,7 @@ namespace cards{
 
         public Monster(){
         this.health = 100;
-        this.name = "Werewolf"
+        this.name = "Werewolf";
         }
     }
 }

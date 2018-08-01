@@ -17,7 +17,7 @@ namespace cards
             myDeck.Shuffle(myDeck.DeckOfCards);
             for (int i = 0; i<=13; i++){
                 Player1.Draw(myDeck.DeckOfCards);
-                }
+            }   
             Player1.LookAtHand(Player1.PlayerHand);
             // Game starts below this line
             string PlayerCommand = "";
@@ -41,11 +41,17 @@ namespace cards
                     PlayerSelect = Console.ReadLine();
                     Player1.Select(PlayerSelect);
                     }
+                if (PlayerCommand == "AllCard"){
+                    Player1.LookAtHand(Player1.PlayerHand);
+                    Player1.AllCard(Player1.PlayerSelection);
+                }
                 System.Console.WriteLine("Shit happened");
                 System.Console.WriteLine("##################################");
                 }
-            }
+                
         }
-        
     }
+        
+}
+
 
